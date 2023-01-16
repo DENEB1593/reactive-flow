@@ -1,4 +1,9 @@
-package io.study.deneb;
+package io.study.deneb.flow;
+
+import io.study.deneb.TempInfo;
+import io.study.deneb.TempProcessor;
+import io.study.deneb.TempSubscriber;
+import io.study.deneb.TempSubscription;
 
 import java.util.concurrent.Flow.*;
 
@@ -19,7 +24,6 @@ public class Main {
       TempProcessor processor = new TempProcessor();
       processor.subscribe(subscriber);
       processor.onSubscribe(new TempSubscription(processor, town));
-
     };
   }
 
